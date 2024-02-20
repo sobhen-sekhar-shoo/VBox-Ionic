@@ -1,0 +1,7 @@
+{
+  "name": "VBox",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
