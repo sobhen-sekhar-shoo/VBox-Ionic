@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { VMasterPage } from './v-master.page';
+import { VMasterPage } from './vt-master.page';
 
 describe('VMasterPage', () => {
   let component: VMasterPage;

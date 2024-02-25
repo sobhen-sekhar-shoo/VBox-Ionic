@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VRoutsModule } from 'src/app/Routers/v-master.routes';
+import { VtRoutsModule } from 'src/app/Routers/vt-master.routes';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule, VRoutsModule
+    CommonModule, VtRoutsModule
   ]
 })
-export class VMasterModule { }
+export class VtMasterModule { }

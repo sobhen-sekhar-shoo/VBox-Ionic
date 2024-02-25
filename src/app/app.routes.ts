@@ -4,25 +4,25 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    loadComponent: () => import('./Pages/home/home.page').then(m => m.HomePage)
   },
   {
-    path: 'home',
-    loadComponent: () => import('./Pages/home/home.page').then(m => m.HomePage),
+    path: 'v-tube',
+    loadComponent: () => import('./layouts/vt-master/vt-master.page').then((m) => m.VtMasterPage),
+    loadChildren: () => import('./Modules/vt-master/vt-master.module').then((m) => m.VtMasterModule),
   },
   {
-    path: 'videos',
-    loadComponent: () => import('./layouts/v-master/v-master.page').then((m) => m.VMasterPage),
-    loadChildren: () => import('./Modules/v-master/v-master.module').then((m) => m.VMasterModule),
-  },
-  {
-    path: 'audios',
+    path: 'v-tune',
     loadComponent: () => import('./layouts/master/master.page').then((m) => m.MasterPage),
     loadChildren: () => import('./Modules/master/master.module').then((m) => m.MasterModule),
   },
   {
-    path: 'shops',
+    path: 'v-chat',
+    loadComponent: () => import('./layouts/master/master.page').then((m) => m.MasterPage),
+    loadChildren: () => import('./Modules/master/master.module').then((m) => m.MasterModule),
+  },
+  {
+    path: 'v-cart',
     loadComponent: () => import('./layouts/master/master.page').then((m) => m.MasterPage),
     loadChildren: () => import('./Modules/master/master.module').then((m) => m.MasterModule),
   },
